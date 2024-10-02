@@ -1,0 +1,15 @@
+static webapp to s3 bucket using GitHub action
+ 
+(https://aws.plainenglish.io/deploying-a-web-app-on-aws-s3-using-github-actions-d7031160acac)
+ 
+1. create a GitHub repository and add index.html in it.
+2. create a s3 bucket.
+3. create user and give permissions administrator access,s3fullaccess,iamfullaccess.
+4. in GitHub goto repo -
+	 settings > secrets and variables > actions > add AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY.
+	add file in .github/workflows/main.yml and copy step 7 from above link.
+5.s3 bucket-
+	properties > static web hosting > enable
+        permissions > bucket policy add from step 4
+	in s3 bucket > index.html select > actions > make public using acl > make public
+	copy website from static website hosting > properties  
